@@ -27,6 +27,4 @@ class Equipos(db.Model):
     __tablename__ = 'equipos'
     id =  Column(BigInteger,primary_key=True,autoincrement=True)
     nombre = Column(String(20), nullable=False)
-    #partidos = relationship("Partidos", cascade ="all, delete-orphan", backref="Equipos",lazy=True)
-    #friends = orm.relation('Person', secondary='friendships', secondaryjoin=Friendship.person1_id==id, primaryjoin=Friendshup.person2_id==id)
     partidos = relationship('Equipos', secondary='partidos', secondaryjoin=Partidos.visitante==id, primaryjoin=Partidos.local==id)

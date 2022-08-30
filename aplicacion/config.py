@@ -1,7 +1,6 @@
 import os
 
 SECRET_KEY = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'#os.random(16)
-#PWD = os.path.abspath(os.curdir)
 
 DEBUG = True
 
